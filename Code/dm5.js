@@ -175,11 +175,11 @@ const dmMachine = setup({
     VerifyTheTopIntentIsMeetingSpeak: {
       entry: [{ type: "speakToTheUser", params: `You want me to create a meeting, is that right?`}],
       on : {
-        SPEAK_COMPLETE: "VerifyTheTopIntentIsMeetingSpeak"
+        SPEAK_COMPLETE: "VerifyTheTopIntentIsMeetingListen"
       }
     },
 
-    VerifyTheTopIntentIsMeetingSpeak: {
+    VerifyTheTopIntentIsMeetingListen: {
       entry: "listenForUsersAnswer",
       on: {
         RECOGNISED: [
